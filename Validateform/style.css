@@ -1,0 +1,86 @@
+:root {
+  --sussess-color: #2691d9;
+  --error-color: #eb1e0c;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(120deg, #3ca7ee, #9b408f);
+  overflow: hidden;
+  font-family: "Poppins";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 400px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  padding: 40px;
+}
+.container h1 {
+  text-align: center;
+}
+.form-control {
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+}
+.form-control input {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #adadad;
+}
+.form-control span {
+  width: 0%;
+  position: absolute;
+  left: 0;
+  top: 38px;
+  border-bottom: 2px solid var(--sussess-color);
+  transition: 0.3s;
+}
+.form-control input:focus ~ span {
+  width: 100%;
+}
+.form-control.error small {
+  color: var(--error-color);
+}
+.form-control.error input {
+  border-bottom: 2px solid var(--error-color);
+}
+.btn-submit {
+  width: 100%;
+  border: 100%;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 25px 0;
+  background: var(--sussess-color);
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btn-submit:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.signup-link {
+  text-align: center;
+}
+.signup-link a {
+  color: var(--sussess-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+.signup-link a:hover {
+  text-decoration: underline;
+}
